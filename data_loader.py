@@ -227,7 +227,7 @@ class BrainAgeDataLoader:
         logger.info(f"AGE column detected: '{self.age_col}'")
 
         # --- DATE column (optional) ---
-        date_keywords = ['date', 'datum', 'study', 'scan']
+        date_keywords = ['study_date', 'scan_date', 'study', 'scan', 'date', 'datum']
         self.date_col = None
         for col in self.df_raw.columns:
             if any(kw in col.lower() for kw in date_keywords):
