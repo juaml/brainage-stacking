@@ -1,0 +1,13 @@
+2026-03-12 21:47:57 | INFO | ======================================================================
+2026-03-12 21:47:57 | INFO | BATCH TRAINER: batch2
+2026-03-12 21:47:57 | INFO | Regions: 11-20
+2026-03-12 21:47:57 | INFO | Preset: full_paper
+2026-03-12 21:47:57 | INFO | ======================================================================
+2026-03-12 21:47:57 | INFO | Loading data...
+2026-03-12 21:47:59 | INFO | ✓ Loaded 563 subjects
+2026-03-12 21:47:59 | INFO | Preparing regions 11-20...
+2026-03-12 21:47:59 | INFO | ✓ Data shape: (563, 4064)
+2026-03-12 21:47:59 | INFO | Building stacking model...
+2026-03-12 21:47:59 | INFO | ✓ Model built: 10 regions
+2026-03-12 21:47:59 | INFO | Training started...
+2026-03-12 21:47:59 | INFO | Features: 4,062, Subjects: 563

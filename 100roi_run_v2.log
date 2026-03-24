@@ -1,0 +1,18 @@
+nohup: ignoring input
+09:50:51 | INFO | ======================================================================
+09:50:51 | INFO | STACKING TRAINER (joblib-htcondor)
+09:50:51 | INFO | ======================================================================
+09:50:51 | INFO | Features dir: /home/fkarateke/IXI_cat12.8.1_mwp1/features
+09:50:51 | INFO | Output dir: /home/fkarateke/brainage-stacking/models/test_100roi_full_v2
+09:50:51 | INFO | N regions: 100
+09:50:51 | INFO | ElasticNetCV: n_alphas=100, l1_ratio=7 values
+09:50:51 | INFO | ======================================================================
+09:50:51 | INFO | Loading data...
+09:50:51 | INFO | ✓ Loaded 563 subjects, 870 regions
+09:50:51 | INFO | Preparing 100 regions...
+09:50:52 | INFO | ✓ Data shape: (563, 36677)
+09:50:52 | INFO | Building stacking model...
+09:50:52 | INFO | ✓ Stacking model built: 100 L0 models
+09:50:52 | INFO | Training with HTCondor backend...
+09:50:52 | INFO | Features: 36,675, Subjects: 563
+09:50:52 | INFO | Submitting to HTCondor...

@@ -1,0 +1,19 @@
+19:18:19 | INFO | ======================================================================
+19:18:19 | INFO | STACKING TRAINER (joblib-htcondor)
+19:18:19 | INFO | ======================================================================
+19:18:19 | INFO | Features dir: /home/fkarateke/IXI_cat12.8.1_mwp1/features
+19:18:19 | INFO | Output dir: /home/fkarateke/brainage-stacking/models/test_10roi_fast
+19:18:19 | INFO | N regions: 10
+19:18:19 | INFO | ElasticNetCV: n_alphas=20, l1_ratio=7 values
+19:18:19 | INFO | ======================================================================
+19:18:19 | INFO | Loading data...
+19:18:20 | INFO | ✓ Loaded 563 subjects, 870 regions
+19:18:20 | INFO | Preparing 10 regions...
+19:18:20 | INFO | ✓ Data shape: (563, 4644)
+19:18:20 | INFO | Building stacking model...
+19:18:20 | INFO | ✓ Stacking model built: 10 L0 models
+19:18:20 | INFO | Training with HTCondor backend...
+19:18:20 | INFO | Features: 4,642, Subjects: 563
+19:18:20 | INFO | Submitting to HTCondor...
+19:21:43 | WARNING | Setting HTCondor backend n_jobs to -1 does not make much sense. We cannot determine the effective number of jobs as HTCondor is actually a queuing system. Ideally, you should set n_jobs to the number of total jobs you will queue, or an arbitrary large number.
+IMPORTANT: the number of jobs that joblib with submit depends on the pre_dispatch parameter of Parallel, which is usually a function of n_jobs. You need to consider that the data transfer is done through the filesystem, so an extremely large number of jobs with large data could lead to a large shared storage requirement. If you set n_jobs to a fixed number, joblib will submit in batches of that number of jobs, so you won't exploit the full potential of this backend. What you might want is to throttle the number of jobs submitted at once, which can be done with the throttle parameter of the backend. As a sane default, we will set the throttle to 1000 and the number of jobs as the maximum possible number of jobs.

@@ -1,0 +1,13 @@
+21:47:57 | INFO | ======================================================================
+21:47:57 | INFO | BATCH TRAINER: batch3
+21:47:57 | INFO | Regions: 21-30
+21:47:57 | INFO | Preset: full_paper
+21:47:57 | INFO | ======================================================================
+21:47:57 | INFO | Loading data...
+21:47:59 | INFO | ✓ Loaded 563 subjects
+21:47:59 | INFO | Preparing regions 21-30...
+21:47:59 | INFO | ✓ Data shape: (563, 4590)
+21:47:59 | INFO | Building stacking model...
+21:47:59 | INFO | ✓ Model built: 10 regions
+21:47:59 | INFO | Training started...
+21:47:59 | INFO | Features: 4,588, Subjects: 563

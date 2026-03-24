@@ -1,0 +1,81 @@
+19:36:25 | INFO | ======================================================================
+19:36:25 | INFO | STACKING TRAINER (joblib-htcondor)
+19:36:25 | INFO | ======================================================================
+19:36:25 | INFO | Features dir: /home/fkarateke/IXI_cat12.8.1_mwp1/features
+19:36:25 | INFO | Output dir: /home/fkarateke/brainage-stacking/models/test_50roi_final4
+19:36:25 | INFO | N regions: 50
+19:36:25 | INFO | ElasticNetCV: n_alphas=100, l1_ratio=7 values
+19:36:25 | INFO | ======================================================================
+19:36:25 | INFO | Loading data...
+19:36:26 | INFO | ✓ Loaded 563 subjects, 870 regions
+19:36:26 | INFO | Preparing 50 regions...
+19:36:27 | INFO | ✓ Data shape: (563, 20330)
+19:36:27 | INFO | Building stacking model...
+19:36:27 | INFO | ✓ Stacking model built: 50 L0 models
+19:36:27 | INFO | Training with HTCondor backend...
+19:36:27 | INFO | Features: 20,328, Subjects: 563
+19:36:27 | INFO | Submitting to HTCondor...
+00:02:14 | ERROR | Training failed: [Errno 2] No such file or directory: '/home/fkarateke/brainage-stacking/joblib_htcondor_shared_data/jht-421fcf80216711f1bac2b8cef6918da0-l0'
+00:02:14 | ERROR | Traceback (most recent call last):
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 1772, in _retrieve
+    batched_results = batched_results.get_result(self.timeout)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 758, in get_result
+    return self._return_or_raise()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 752, in get_result
+    result = self.job.get()
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.11/threading.py", line 320, in wait
+    waiter.acquire()
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib_htcondor/backend.py", line 1130, in _sigterm_handler
+    shutil.rmtree(self._current_shared_data_dir)
+  File "/usr/lib/python3.11/shutil.py", line 722, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+  File "/usr/lib/python3.11/shutil.py", line 720, in rmtree
+    orig_st = os.lstat(path, dir_fd=dir_fd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/fkarateke/brainage-stacking/joblib_htcondor_shared_data/jht-421fcf80216711f1bac2b8cef6918da0-l0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/fkarateke/brainage-stacking/train_stacking_joblib.py", line 191, in train
+    X=all_features,
+                  ^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/api.py", line 575, in run_cross_validation
+    scores = cross_validate(
+             ^^^^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 309, in cross_validate
+    results = parallel(
+              ^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 65, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 1711, in _get_outputs
+    self._terminate_and_reset()
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib/parallel.py", line 1383, in _terminate_and_reset
+    self._backend.stop_call()
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib_htcondor/backend.py", line 1118, in stop_call
+    self._sigterm_handler(None, None)
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib_htcondor/backend.py", line 1130, in _sigterm_handler
+    shutil.rmtree(self._current_shared_data_dir)
+  File "/usr/lib/python3.11/shutil.py", line 722, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+  File "/usr/lib/python3.11/shutil.py", line 720, in rmtree
+    orig_st = os.lstat(path, dir_fd=dir_fd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/fkarateke/brainage-stacking/joblib_htcondor_shared_data/jht-421fcf80216711f1bac2b8cef6918da0-l0'
+

@@ -1,0 +1,17 @@
+11:38:10 | INFO | ======================================================================
+11:38:10 | INFO | STACKING TRAINER (joblib-htcondor)
+11:38:10 | INFO | ======================================================================
+11:38:10 | INFO | Features dir: /home/fkarateke/IXI_cat12.8.1_mwp1/features
+11:38:10 | INFO | Output dir: /home/fkarateke/brainage-stacking/models/test_10roi_yeni
+11:38:10 | INFO | N regions: 10
+11:38:10 | INFO | ElasticNetCV: n_alphas=100, l1_ratio=7 values
+11:38:10 | INFO | ======================================================================
+11:38:10 | INFO | Loading data...
+11:38:11 | INFO | ✓ Loaded 563 subjects, 870 regions
+11:38:11 | INFO | Preparing 10 regions...
+11:38:11 | INFO | ✓ Data shape: (563, 4644)
+11:38:11 | INFO | Building stacking model...
+11:38:11 | INFO | ✓ Stacking model built: 10 L0 models
+11:38:11 | INFO | Training with HTCondor backend...
+11:38:11 | INFO | Features: 4,642, Subjects: 563
+11:38:11 | INFO | Submitting to HTCondor...

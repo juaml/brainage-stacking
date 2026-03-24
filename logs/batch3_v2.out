@@ -1,0 +1,14 @@
+16:17:01 | INFO | ======================================================================
+16:17:01 | INFO | BATCH TRAINER: batch3
+16:17:01 | INFO | Regions: 21-30
+16:17:01 | INFO | Preset: paper_compliant - Paper-compliant using ElasticNetCV (automatic tuning)
+16:17:01 | INFO | ElasticNetCV: n_alphas=100, l1_ratio=7 values
+16:17:01 | INFO | ======================================================================
+16:17:01 | INFO | Loading data...
+16:17:02 | INFO | ✓ Loaded 563 subjects
+16:17:02 | INFO | Preparing regions 21-30...
+16:17:02 | INFO | ✓ Data shape: (563, 4590)
+16:17:02 | INFO | Building stacking model with ElasticNetCV...
+16:17:02 | INFO | ✓ Model built: 10 regions with ElasticNetCV
+16:17:02 | INFO | Training started...
+16:17:02 | INFO | Features: 4,588, Subjects: 563

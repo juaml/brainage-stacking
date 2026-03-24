@@ -1,0 +1,74 @@
+000 (10476912.000.000) 2026-03-16 19:38:05 Job submitted from host: <10.0.8.14:9618?addrs=10.0.8.14-9618&alias=head2.htc.inm7.de&noUDP&sock=schedd_1212952_c2ee>
+...
+001 (10476912.000.000) 2026-03-16 19:54:27 Job executing on host: <10.0.9.9:9618?addrs=10.0.9.9-9618&alias=cpu9.htc.inm7.de&noUDP&sock=startd_3408_2ed9>
+...
+006 (10476912.000.000) 2026-03-16 19:54:35 Image size of job updated: 7500
+	5  -  MemoryUsage of job (MB)
+	4956  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-16 19:59:35 Image size of job updated: 591824
+	350  -  MemoryUsage of job (MB)
+	357968  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-16 20:44:40 Image size of job updated: 591824
+	351  -  MemoryUsage of job (MB)
+	358480  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-16 21:59:46 Image size of job updated: 596484
+	355  -  MemoryUsage of job (MB)
+	362712  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 00:05:00 Image size of job updated: 779204
+	471  -  MemoryUsage of job (MB)
+	481552  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 01:20:08 Image size of job updated: 779204
+	471  -  MemoryUsage of job (MB)
+	481600  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 02:00:11 Image size of job updated: 779280
+	471  -  MemoryUsage of job (MB)
+	482112  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 09:20:57 Image size of job updated: 781880
+	474  -  MemoryUsage of job (MB)
+	484360  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 10:11:02 Image size of job updated: 781956
+	474  -  MemoryUsage of job (MB)
+	484360  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 10:46:05 Image size of job updated: 781956
+	475  -  MemoryUsage of job (MB)
+	486296  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 11:11:07 Image size of job updated: 781956
+	475  -  MemoryUsage of job (MB)
+	486372  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 19:32:00 Image size of job updated: 802352
+	495  -  MemoryUsage of job (MB)
+	506464  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-17 20:47:08 Image size of job updated: 802432
+	495  -  MemoryUsage of job (MB)
+	506464  -  ResidentSetSize of job (KB)
+...
+006 (10476912.000.000) 2026-03-19 22:27:01 Image size of job updated: 810732
+	507  -  MemoryUsage of job (MB)
+	519020  -  ResidentSetSize of job (KB)
+...
+004 (10476912.000.000) 2026-03-20 00:00:41 Job was evicted.
+	(0) CPU times
+		Usr 3 09:49:08, Sys 0 00:12:19  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        2         2 
+	   Disk (KB)            :  7500     2097152   7541655 
+	   Memory (MB)          :   507        8192      8192 
+...
+009 (10476912.000.000) 2026-03-20 00:00:41 Job was aborted.
+	via condor_rm (by user fkarateke)
+...

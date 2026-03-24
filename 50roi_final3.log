@@ -1,0 +1,13 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/fkarateke/brainage-stacking/train_stacking_joblib.py", line 22, in <module>
+    from julearn import run_cross_validation
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/__init__.py", line 10, in <module>
+    from . import pipeline
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/pipeline/__init__.py", line 5, in <module>
+    from .pipeline_creator import PipelineCreator
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/pipeline/pipeline_creator.py", line 26, in <module>
+    from ..prepare import prepare_search_params
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/prepare.py", line 201
+    for exp in regexes:
+IndentationError: unexpected indent

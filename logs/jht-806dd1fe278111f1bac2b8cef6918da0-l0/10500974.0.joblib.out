@@ -1,0 +1,28 @@
+2026-03-24 14:01:24 joblib_htcondor.executor INFO     Setting logging level to 20
+2026-03-24 14:01:24 joblib_htcondor.executor INFO     Loading DelayedSubmission object from /home/fkarateke/brainage-stacking/jht-806dd1fe278111f1bac2b8cef6918da0-l0/task-4.pickle
+2026-03-24 14:01:25 joblib_htcondor.executor INFO     Running DelayedSubmission object
+2026-03-24 14:01:36,904 - joblib_htcondor.backend - INFO - Setting n_jobs to 4611686018427387903, though this value does not have any effect.
+2026-03-24 14:01:36,905 - joblib_htcondor.backend - INFO - 	Batch name: jht-975f1a94278111f1bdc53cecef4effe6-l1
+2026-03-24 14:01:36,905 - joblib_htcondor.backend - INFO - Setting log dir prefix to /home/fkarateke/brainage-stacking/logs/jht-975f1a94278111f1bdc53cecef4effe6-l1
+2026-03-24 14:01:36,906 - joblib_htcondor.backend - INFO - Setting shared data dir to /home/fkarateke/brainage-stacking/jht-975f1a94278111f1bdc53cecef4effe6-l1
+2026-03-24 14:01:36,907 - joblib_htcondor.backend - INFO - Starting HTCondor backend watcher.
+2026-03-24 14:01:36,910 - joblib_htcondor.backend - INFO - Polling every 5 seconds.
+2026-03-24 14:01:36,911 - joblib_htcondor.backend - INFO - Throttle set to 50.
+2026-03-24 14:01:41,935 - joblib_htcondor.backend - ERROR - Error in HTCondor backend watcher: Failed to connect to schedd.
+2026-03-24 14:01:41,937 - joblib_htcondor.backend - ERROR - Traceback (most recent call last):
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib_htcondor/backend.py", line 906, in _watcher
+    self._client.submit(
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/htcondor2/_schedd.py", line 459, in submit
+    return _schedd_submit(self._addr, real._handle, count, spool)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+htcondor2_impl.HTCondorException: Failed to connect to schedd.
+
+2026-03-24 14:01:46,959 - joblib_htcondor.backend - ERROR - Error in HTCondor backend watcher: Failed to connect to schedd.
+2026-03-24 14:01:46,960 - joblib_htcondor.backend - ERROR - Traceback (most recent call last):
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/joblib_htcondor/backend.py", line 906, in _watcher
+    self._client.submit(
+  File "/home/fkarateke/julearn_env/lib/python3.11/site-packages/htcondor2/_schedd.py", line 459, in submit
+    return _schedd_submit(self._addr, real._handle, count, spool)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+htcondor2_impl.HTCondorException: Failed to connect to schedd.
+

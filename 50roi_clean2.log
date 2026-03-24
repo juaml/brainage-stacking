@@ -1,0 +1,22 @@
+nohup: ignoring input
+12:38:45 | INFO | ======================================================================
+12:38:45 | INFO | STACKING TRAINER (joblib-htcondor)
+12:38:45 | INFO | ======================================================================
+12:38:45 | INFO | Features dir: /home/fkarateke/IXI_cat12.8.1_mwp1/features
+12:38:45 | INFO | Output dir: /home/fkarateke/brainage-stacking/models/test_50roi_clean2
+12:38:45 | INFO | N regions: 50
+12:38:45 | INFO | ElasticNetCV: n_alphas=100, l1_ratio=7 values
+12:38:45 | INFO | ======================================================================
+12:38:45 | INFO | Loading data...
+12:38:46 | INFO | ✓ Loaded 563 subjects, 870 regions
+12:38:46 | INFO | Preparing 50 regions...
+12:38:47 | INFO | ✓ Data shape: (563, 20330)
+12:38:47 | INFO | Building stacking model...
+12:38:47 | INFO | ✓ Stacking model built: 50 L0 models
+12:38:47 | INFO | Training with HTCondor backend...
+12:38:47 | INFO | Features: 20,328, Subjects: 563
+12:38:47 | INFO | Submitting to HTCondor...
+/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/prepare.py:195: RuntimeWarning: The dataframe has 20330 columns. Checking X for consistency might take a while. To skip this checks, set the config flag `disable_x_check` to `True`.
+  warn_with_log(
+/home/fkarateke/julearn_env/lib/python3.11/site-packages/julearn/prepare.py:471: RuntimeWarning: X has 20328 columns. Checking X_types for consistency might take a while. To skip this checks, set the config flag `disable_xtypes_check` to `True`.
+  warn_with_log(
