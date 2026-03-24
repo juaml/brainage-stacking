@@ -1,3 +1,0 @@
-2026-03-16 19:54:28 joblib_htcondor.executor INFO     Setting logging level to 20
-2026-03-16 19:54:28 joblib_htcondor.executor INFO     Loading DelayedSubmission object from /home/fkarateke/brainage-stacking/joblib_htcondor_shared_data/jht-421fcf80216711f1bac2b8cef6918da0-l0/task-1.pickle
-2026-03-16 19:54:34 joblib_htcondor.executor INFO     Running DelayedSubmission object

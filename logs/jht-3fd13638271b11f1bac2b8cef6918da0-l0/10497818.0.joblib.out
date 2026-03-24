@@ -1,6 +1,0 @@
-2026-03-24 01:49:28 joblib_htcondor.executor INFO     Setting logging level to 20
-2026-03-24 01:49:28 joblib_htcondor.executor INFO     Loading DelayedSubmission object from /data/project/deleted_every_sunday/jht-3fd13638271b11f1bac2b8cef6918da0-l0/task-2.pickle
-2026-03-24 01:49:29 joblib_htcondor.executor INFO     Running DelayedSubmission object
-2026-03-24 04:29:47 joblib_htcondor.executor INFO     DelayedSubmission finished
-2026-03-24 04:29:47 joblib_htcondor.executor INFO     Dumping DelayedSubmission (result only) to /data/project/deleted_every_sunday/jht-3fd13638271b11f1bac2b8cef6918da0-l0/task-2_out.pickle
-2026-03-24 04:29:47 joblib_htcondor.executor INFO     Done.
