@@ -249,7 +249,7 @@ class StackingTrainer:
                 request_cpus=1,  # 1 CPU per job (easier slot matching)
                 request_memory="4GB",  # Memory per job
                 request_disk="5GB",  # Scratch disk per job
-                shared_data_dir="/data/group/appliedml/joblib_htcondor_shared",  # NFS shared directory
+                shared_data_dir="/data/group/appliedml/fkarateke_joblib_htcondor",  # NFS shared directory
                 pool="head2.htc.inm7.de",  # HTCondor scheduler
                 # max_recursion_level NOT set (defaults to 0 - no recursion)
                 # Token required for max_recursion_level=1
