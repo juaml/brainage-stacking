@@ -4,6 +4,9 @@ Tests for Module 1: Data Loader
 ============================================================
 Run:
     python -m pytest tests/test_data_loader.py -v
+    Author:
+    Fatma Karateke
+    fatma.karateke@hhu.de
 ============================================================
 """
 
