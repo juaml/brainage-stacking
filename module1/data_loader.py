@@ -42,6 +42,9 @@ Author:
     Brain Age Prediction Project
 Version:
     1.0.0
+    Author:
+    Fatma Karateke
+    fatma.karateke@hhu.de
 ============================================================
 """
 
