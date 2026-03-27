@@ -5,6 +5,9 @@ Version: 0.2 (Without Token - Basic Parallelization)
 
 This version uses only outer CV parallelization (no recursive).
 For recursive parallelization (max_recursion_level=1), token is required.
+Author:
+    Fatma Karateke
+    fatma.karateke@hhu.de
 """
 
 import argparse
