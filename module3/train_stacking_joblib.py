@@ -258,7 +258,8 @@ class StackingTrainer:
                 # Token required for max_recursion_level=1
                 max_recursion_level=1,  # Outer CV + Stacking
                 export_metadata=True,  # to visualize progress
-                throttle=[6, 40]  # Throttle levels
+                throttle=[6, 40],  # Throttle levels
+                delete_task_file_on_load=True,  # Free disk space after loading
             ):
                 scores, trained_model = run_cross_validation(
                     X=all_features,
