@@ -298,7 +298,7 @@ if __name__ == "__main__":
         # Token required for max_recursion_level=1
         max_recursion_level=1,  # Outer CV + Stacking
         export_metadata=True,  # to visualize progress
-        throttle=[6, 8],  # Throttle levels
+        throttle=[6, 15],  # Throttle levels
         delete_task_file_on_load=True,  # Free disk space after loading
         log_dir_prefix="/data/project/brainage/fkarateke_joblib_htcondor/logs",  # Shared log dir
     ):
