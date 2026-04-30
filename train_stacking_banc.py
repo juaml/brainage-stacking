@@ -292,7 +292,7 @@ if __name__ == "__main__":
         request_cpus=1,  # 1 CPU per job (easier slot matching)
         request_memory="8GB",  # Memory per job
         request_disk="5GB",  # Scratch disk per job
-        shared_data_dir="/data/group/appliedml/fkarateke_joblib_htcondor",  # NFS shared directory
+        shared_data_dir="/data/project/deleted_every_sunday/fkarateke_joblib_htcondor",  # NFS shared directory
         pool="head2.htc.inm7.de",  # HTCondor scheduler
         # max_recursion_level NOT set (defaults to 0 - no recursion)
         # Token required for max_recursion_level=1
@@ -300,7 +300,7 @@ if __name__ == "__main__":
         export_metadata=True,  # to visualize progress
         throttle=[6, 35],  # Throttle levels
         delete_task_file_on_load=True,  # Free disk space after loading
-        log_dir_prefix="/data/group/appliedml/fkarateke_joblib_htcondor/logs",  # Shared log dir
+        log_dir_prefix="/data/project/deleted_every_sunday/fkarateke_joblib_htcondor/logs",  # Shared log dir
     ):
         scores, trained_model = run_cross_validation(
             X=X,
