@@ -46,7 +46,7 @@ def load_data():
     return regional_voxels, metadata
 
 
-def prepare_data(metadata, regional_voxels, n_regions):
+def prepare_data(metadata, regional_voxels, n_regions, training_csv=None):
     """Prepare DataFrame with features from selected regions"""
     logger.info(f"Preparing {n_regions} regions...")
 
@@ -80,6 +80,12 @@ def prepare_data(metadata, regional_voxels, n_regions):
 
     logger.info(f"✓ Data shape: {data.shape}")
 
+    if training_csv:
+        train_df = pd.read_csv(training_csv)
+        train_ids = set(train_df["ID"].astype(str).tolist())
+        data["subject_id"] = data["subject_id"].astype(str)
+        data = data[data["subject_id"].isin(train_ids)].reset_index(drop=True)
+        logger.info(f"✓ Training subjects: {len(data)}")
     return data, feature_names, X_types
 
 
@@ -213,6 +219,12 @@ if __name__ == "__main__":
         help="Random seed for reproducibility (default: 42)",
     )
 
+    parser.add_argument(
+        "--training_csv",
+        type=str,
+        default=None,
+        help="CSV file with training subject IDs",
+    )
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
@@ -286,8 +298,9 @@ if __name__ == "__main__":
         # Token required for max_recursion_level=1
         max_recursion_level=1,  # Outer CV + Stacking
         export_metadata=True,  # to visualize progress
-        throttle=[6, 40],  # Throttle levels
+        throttle=[6, 35],  # Throttle levels
         delete_task_file_on_load=True,  # Free disk space after loading
+        log_dir_prefix="/data/group/appliedml/fkarateke_joblib_htcondor/logs",  # Shared log dir
     ):
         scores, trained_model = run_cross_validation(
             X=X,
