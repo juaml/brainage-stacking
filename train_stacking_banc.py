@@ -290,7 +290,7 @@ if __name__ == "__main__":
         backend="htcondor",
         n_jobs=-1,  # Maximum parallelization
         request_cpus=1,  # 1 CPU per job (easier slot matching)
-        request_memory="8GB",  # Memory per job
+        request_memory="16GB",  # Memory per job
         request_disk="5GB",  # Scratch disk per job
         shared_data_dir="/data/project/brainage/fkarateke_joblib_htcondor",  # NFS shared directory
         pool="head2.htc.inm7.de",  # HTCondor scheduler
