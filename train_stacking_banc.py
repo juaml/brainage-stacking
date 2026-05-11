@@ -244,8 +244,8 @@ if __name__ == "__main__":
     # Paper-compliant parameters (Cole et al. 2017)
     l1_ratio = [0.1, 0.5, 0.7, 0.9, 0.95, 0.99, 1.0]
     n_alphas = n_alphas
-    max_iter = 100000
-    tol = 1e-7
+    max_iter = 1000
+    tol = 1e-4
     l0_cv = 3  # Inner CV
     outer_cv = 5  # Outer CV
 
