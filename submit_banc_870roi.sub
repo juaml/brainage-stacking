@@ -1,5 +1,5 @@
 executable = /home/fkarateke/julearn_env/bin/python
-arguments = /data/group/appliedml/fkarateke_data/brainage-stacking-code/module3/train_stacking_banc.py /data/group/appliedml/fkarateke_data/banc_features/ /data/group/appliedml/fkarateke_data/banc_model_870roi/ --n_regions 870 --n_alphas 100 --seed 42 --training_csv /data/group/appliedml/fkarateke_data/training_matched.csv
+arguments = /home/fkarateke/brainage-stacking/train_stacking_banc.py /data/group/appliedml/fkarateke_data/banc_features/ /data/group/appliedml/fkarateke_data/banc_model_870roi/ --n_regions 870 --n_alphas 100 --seed 42 --training_csv /data/group/appliedml/fkarateke_data/training_matched.csv
 output = /data/group/appliedml/fkarateke_data/logs/banc_870roi.$(Cluster).$(Process).out
 error  = /data/group/appliedml/fkarateke_data/logs/banc_870roi.$(Cluster).$(Process).err
 log    = /data/group/appliedml/fkarateke_data/logs/banc_870roi.$(Cluster).log

@@ -24,6 +24,7 @@ from joblib import parallel_config
 # HTCondor backend
 from joblib_htcondor import register_htcondor
 from julearn import run_cross_validation
+from sklearn.model_selection import KFold
 from julearn.config import set_config
 from julearn.pipeline import PipelineCreator
 from julearn.utils import configure_logging, logger
@@ -116,6 +117,7 @@ def build_model(n_regions, l1_ratio, n_alphas, l0_cv, max_iter, tol, seed):
                 max_iter=max_iter,
                 tol=tol,
                 random_state=seed,
+                copy_X=False,
                 n_jobs=1,  # CRITICAL: Must be 1 to avoid job explosion
             ),
         )
@@ -133,6 +135,7 @@ def build_model(n_regions, l1_ratio, n_alphas, l0_cv, max_iter, tol, seed):
             max_iter=max_iter,
             tol=tol,
             random_state=seed,
+            copy_X=False,
             n_jobs=1,
         )
     )
@@ -152,13 +155,10 @@ def build_model(n_regions, l1_ratio, n_alphas, l0_cv, max_iter, tol, seed):
     return stacking
 
 
-def _save_results(model, scores, mae, r2, rmse, elapsed):
+def _save_results(scores, mae, r2, rmse, elapsed):
     """Save trained model and results"""
     logger.info("Saving results...")
 
-    # Save model
-    with open(output_dir / "model.pkl", "wb") as f:
-        pickle.dump(model, f)
 
     # Save scores
     with open(output_dir / "scores.pkl", "wb") as f:
@@ -209,7 +209,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n_alphas",
         type=int,
-        default=100,
+        default=40,
         help="Number of alpha values for ElasticNetCV (default: 100)",
     )
     parser.add_argument(
@@ -290,7 +290,7 @@ if __name__ == "__main__":
         backend="htcondor",
         n_jobs=-1,  # Maximum parallelization
         request_cpus=1,  # 1 CPU per job (easier slot matching)
-        request_memory="16GB",  # Memory per job
+        request_memory="64GB",  # Memory per job
         request_disk="5GB",  # Scratch disk per job
         shared_data_dir="/data/project/brainage/fkarateke_joblib_htcondor",  # NFS shared directory
         pool="head2.htc.inm7.de",  # HTCondor scheduler
@@ -300,17 +300,17 @@ if __name__ == "__main__":
         export_metadata=True,  # to visualize progress
         throttle=[6, 20],  # Throttle levels
         delete_task_file_on_load=True,  # Free disk space after loading
+        lock_lifetime=600,  # Lock files long enough for large pickles to finish writing
         log_dir_prefix="/data/project/brainage/fkarateke_joblib_htcondor/logs",  # Shared log dir
     ):
-        scores, trained_model = run_cross_validation(
+        scores = run_cross_validation(
             X=X,
             X_types=X_types,
             y="age",
             data=data,
             model=model,
-            cv=outer_cv,
+            cv=KFold(n_splits=outer_cv, shuffle=True, random_state=seed),
             scoring=["neg_mean_absolute_error", "r2", "neg_mean_squared_error"],
-            return_estimator="final",
             seed=seed,
         )
 
@@ -334,5 +334,5 @@ if __name__ == "__main__":
 
     # Save results
     _save_results(
-        model=trained_model, scores=scores, mae=mae, r2=r2, rmse=rmse, elapsed=elapsed
+        scores=scores, mae=mae, r2=r2, rmse=rmse, elapsed=elapsed
     )
