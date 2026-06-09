@@ -292,7 +292,7 @@ if __name__ == "__main__":
         request_cpus=1,  # 1 CPU per job (easier slot matching)
         request_memory="64GB",  # Memory per job
         request_disk="5GB",  # Scratch disk per job
-        shared_data_dir="/data/project/brainage/fkarateke_joblib_htcondor",  # NFS shared directory
+        shared_data_dir="/data/project/brainage/fkarateke_joblib_htcondor/shared",  # NFS shared directory
         pool="head2.htc.inm7.de",  # HTCondor scheduler
         # max_recursion_level NOT set (defaults to 0 - no recursion)
         # Token required for max_recursion_level=1
@@ -302,6 +302,8 @@ if __name__ == "__main__":
         delete_task_file_on_load=True,  # Free disk space after loading
         lock_lifetime=600,  # Lock files long enough for large pickles to finish writing
         log_dir_prefix="/data/project/brainage/fkarateke_joblib_htcondor/logs",  # Shared log dir
+        cache_dir="/data/project/brainage/fkarateke_joblib_htcondor/cache",  # Shared cache dir
+        uuid_seed="{f37d9695-22be-3a39-a5fa-20ddc6596482}",  # seed for UUID generation (for reproducibility of job IDs across runs)
     ):
         scores = run_cross_validation(
             X=X,
